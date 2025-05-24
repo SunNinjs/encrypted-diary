@@ -1,3 +1,4 @@
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class Entry {
@@ -14,5 +15,11 @@ public class Entry {
 
     public String getData() {
         return this.data;
+    }
+
+    @Override
+    public String toString() {
+        SimpleDateFormat formater = new SimpleDateFormat("MM-dd-yyyy");
+        return formater.format(time) + "\n" + data;
     }
 }
